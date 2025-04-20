@@ -1,4 +1,4 @@
-# EHR-Adoption-DataSet-Analysis
+# EHR Adoption Dataset Analysis
 
 PySpark Documentation: https://spark.apache.org/docs/latest/api/python/user_guide/index.html
 
