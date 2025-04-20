@@ -1,72 +1,78 @@
 # EHR-Adoption-DataSet-Analysis
 
 
-This project focuses on analyzing the adoption of Electronic Health Records (EHR) in non-federal acute care hospitals across the U.S. Using data provided by HealthIT.gov, this repository showcases a complete pipeline from data cleaning to visualization, including machine learning-driven imputation and exploratory analysis.
+This project explores the adoption of Electronic Health Records (EHR) in non-federal acute care hospitals using big data tools. The analysis was conducted in a PySpark environment to efficiently handle, clean, and model the dataset at scale.
 
-Project Summary
-Dataset: Non-federal acute care hospital EHR adoption data (CSV format)
+Project Overview
+Dataset: U.S. Department of Health & Human Services — Non-Federal Acute Care Hospital Health IT Adoption
 
-Goal: Assess trends and patterns in EHR adoption using data science and machine learning techniques
+Format: CSV
 
-Key Steps
-Data Import & Schema Adjustment
+Objective: Analyze adoption patterns using distributed processing and machine learning in PySpark
 
-Loaded CSV dataset
+Workflow Summary
+Data Import & Schema Update
 
-Renamed and standardized column schema
+Loaded CSV into Spark DataFrame
 
-Dropped irrelevant columns
+Renamed columns and updated schema types for consistency
 
-Data Imputation (ML & Statistical)
+Multimodel Imputation (PySpark MLlib + Custom Logic)
 
-Performed multimodel imputation using RandomForestRegressor, KNNImputer, and others
+Built custom pipeline for handling missing values:
 
-Applied group-based imputation (e.g., by region or hospital size)
+Used RandomForestRegressor and KNNImputer via PySpark integration
 
-Fallback to global mean imputation for residual missing values
+Performed group-based imputation (e.g., grouped by region/type)
 
-New Data Table Creation
+Applied mean imputation as a fallback for remaining nulls
 
-Consolidated cleaned and imputed data into a new final dataset for analysis
+Data Transformation
 
-SQL Analysis
+Created a new Spark table after full imputation
 
-Created multiple SQL queries to explore trends such as:
+Optimized schema for query efficiency
 
-EHR adoption by region
+SQL Queries
 
-Hospital characteristics affecting adoption
+Ran multiple exploratory queries via Spark SQL to derive insights:
 
-Longitudinal adoption patterns
+EHR adoption by geographic region
+
+Comparison across hospital types and sizes
+
+Time-based adoption patterns (if applicable)
 
 Machine Learning Modeling
 
-Trained and evaluated models including:
+Trained and compared multiple models (classification/regression where applicable):
 
-Random Forest
+Random Forest, Logistic Regression, and Gradient Boosted Trees using pyspark.ml
 
-Logistic Regression
+Evaluated model accuracy, ROC/AUC, and feature importance
 
-XGBoost
+Visualization
 
-Assessed model accuracy, F1 score, and feature importance
+Used matplotlib/seaborn/plotly (outside Spark) after collecting sampled/predictive results
 
-Data Visualization
+Visualized:
 
-Built informative visualizations (matplotlib, seaborn, plotly) to illustrate:
+Before/after imputation heatmaps
 
-Missing data before/after imputation
+Feature importances
 
-Model performance comparisons
+Adoption rate distributions
 
-EHR adoption trends and distributions
+Tech Stack
+Apache Spark (PySpark)
 
-Technologies Used
-Python (Pandas, NumPy, scikit-learn)
+Spark MLlib
 
-SQL 
+Spark SQL
 
-Jupyter Notebook / VS Code
+Python (matplotlib, seaborn, pandas for local plotting)
+
+Jupyter Notebooks / Databricks / VS Code
 
 Git
 
