@@ -1,5 +1,8 @@
 # EHR-Adoption-DataSet-Analysis
 
+PySpark Documentation: https://spark.apache.org/docs/latest/api/python/user_guide/index.html
+
+Data Source Link: https://catalog.data.gov/dataset/non-federal-acute-care-hospital-health-it-adoption-and-use
 
 This project explores the adoption of Electronic Health Records (EHR) in non-federal acute care hospitals using big data tools. The analysis was conducted in a PySpark environment to efficiently handle, clean, and model the dataset at scale.
 
