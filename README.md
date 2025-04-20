@@ -4,6 +4,7 @@
 This project explores the adoption of Electronic Health Records (EHR) in non-federal acute care hospitals using big data tools. The analysis was conducted in a PySpark environment to efficiently handle, clean, and model the dataset at scale.
 
 **Project Overview**
+
 *Dataset*: U.S. Department of Health & Human Services — Non-Federal Acute Care Hospital Health IT Adoption
 
 Format: CSV
