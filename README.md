@@ -3,15 +3,15 @@
 
 This project explores the adoption of Electronic Health Records (EHR) in non-federal acute care hospitals using big data tools. The analysis was conducted in a PySpark environment to efficiently handle, clean, and model the dataset at scale.
 
-Project Overview
-Dataset: U.S. Department of Health & Human Services — Non-Federal Acute Care Hospital Health IT Adoption
+**Project Overview**
+*Dataset*: U.S. Department of Health & Human Services — Non-Federal Acute Care Hospital Health IT Adoption
 
 Format: CSV
 
-Objective: Analyze adoption patterns using distributed processing and machine learning in PySpark
+*Objective*: Analyze adoption patterns using distributed processing and machine learning in PySpark
 
-Workflow Summary
-Data Import & Schema Update
+# Workflow Summary
+*Data Import & Schema Update*
 
 Loaded CSV into Spark DataFrame
 
@@ -27,13 +27,13 @@ Performed group-based imputation (e.g., grouped by region/type)
 
 Applied mean imputation as a fallback for remaining nulls
 
-Data Transformation
+*Data Transformation*
 
 Created a new Spark table after full imputation
 
 Optimized schema for query efficiency
 
-SQL Queries
+*SQL Queries*
 
 Ran multiple exploratory queries via Spark SQL to derive insights:
 
@@ -43,7 +43,7 @@ Comparison across hospital types and sizes
 
 Time-based adoption patterns (if applicable)
 
-Machine Learning Modeling
+*Machine Learning Modeling*
 
 Trained and compared multiple models (classification/regression where applicable):
 
@@ -51,19 +51,20 @@ Random Forest, Logistic Regression, and Gradient Boosted Trees using pyspark.ml
 
 Evaluated model accuracy, ROC/AUC, and feature importance
 
-Visualization
+*Visualization*
 
 Used matplotlib/seaborn/plotly (outside Spark) after collecting sampled/predictive results
 
 Visualized:
 
-Before/after imputation heatmaps
-
 Feature importances
 
 Adoption rate distributions
 
-Tech Stack
+Model accuracy differences
+
+
+**Tech Stack**
 Apache Spark (PySpark)
 
 Spark MLlib
